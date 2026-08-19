@@ -10,7 +10,7 @@ Ochoa Castillejo Absalón/ Exxa27
 
 >Integrantes
 
-Arellano Guerrero Andrea Guadalupe/
+Arellano Guerrero Andrea Guadalupe/ Andrearellan1
 
 Gonzalez Gonzalez Octavio/ Octavio
 
