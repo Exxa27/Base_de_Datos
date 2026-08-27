@@ -1,4 +1,4 @@
-# Base_de_Datos-Proyecto_prron
+# Base_de_Datos-Proyecto_Administracion de prision
 Proyecto realizado para la materia base de datos
 
 Empezaremo un proyecto
