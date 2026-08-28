@@ -1,4 +1,4 @@
-# Base_de_Datos-Proyecto_prron
+# Base_de_Datos-Proyecto_Administracion de prision
 Proyecto realizado para la materia base de datos
 
 Empezaremo un proyecto
@@ -10,9 +10,9 @@ Ochoa Castillejo Absalón/ Exxa27
 
 >Integrantes
 
-Arellano Guerrero Andrea Guadalupe/
+Arellano Guerrero Andrea Guadalupe/ Andrearellan1
 
-Gonzalez Gonzalez Octavio/Octavio
+Gonzalez Gonzalez Octavio/ Octavio
 
 Reyes Nacarro Leonardo Israel/
 
