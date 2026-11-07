@@ -1,0 +1,15 @@
+{
+  "name": "la-penal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema penitenciario: base de datos híbrida (PostgreSQL + MongoDB) con datos sintéticos generados con Faker.",
+  "scripts": {
+    "setup": "powershell -NoProfile -ExecutionPolicy Bypass -File run.ps1 -Paso dependencias",
+    "seed": "powershell -NoProfile -ExecutionPolicy Bypass -File run.ps1 -Paso generar",
+    "db:postgres": "powershell -NoProfile -ExecutionPolicy Bypass -File run.ps1 -Paso postgres",
+    "db:mongo": "powershell -NoProfile -ExecutionPolicy Bypass -File run.ps1 -Paso mongo",
+    "verify": "powershell -NoProfile -ExecutionPolicy Bypass -File run.ps1 -Paso verificar",
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File run.ps1 -Paso todo"
+  },
+  "license": "UNLICENSED"
+}
