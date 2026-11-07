@@ -1,0 +1,340 @@
+      seccion      |  pabellon  | capacidad_total | reclusos_en_custodia | porcentaje_ocupacion 
+-------------------+------------+-----------------+----------------------+----------------------
+ Mediana seguridad | Pabellón 1 |              39 |                   39 |                100.0
+ Mediana seguridad | Pabellón 2 |              36 |                   36 |                100.0
+ Preliberación     | Pabellón 1 |              30 |                   30 |                100.0
+ Preliberación     | Pabellón 2 |              30 |                   30 |                100.0
+ Aislamiento       | Pabellón 1 |              12 |                   10 |                 83.3
+(5 filas)
+
+       diagnostico        | consultas | reclusos_atendidos | recetas_emitidas 
+--------------------------+-----------+--------------------+------------------
+ Hepatitis viral          |        39 |                 35 |               36
+ Hipertensión arterial    |        37 |                 35 |               26
+ Migraña                  |        35 |                 34 |               26
+ Gastritis                |        34 |                 33 |               25
+ Influenza estacional     |        34 |                 34 |               28
+ Fractura simple          |        34 |                 33 |               25
+ Diabetes mellitus tipo 2 |        33 |                 33 |               25
+ Contusión por golpe      |        30 |                 29 |               21
+ Trastorno de ansiedad    |        29 |                 27 |               21
+ Infección urinaria       |        29 |                 27 |               18
+(10 filas)
+
+          puesto          |           turno            | empleados | sueldo_promedio 
+--------------------------+----------------------------+-----------+-----------------
+ Abogado de oficio        | Matutino L-S               |         2 |        24603.90
+ Abogado de oficio        | Matutino L-V               |         1 |        32850.48
+ Administrativo           | Matutino L-V               |         6 |        17532.79
+ Administrativo           | Matutino L-S               |         5 |        15734.32
+ Archivista               | Matutino L-V               |         2 |        11490.08
+ Conductor                | Matutino L-S               |         2 |        11897.65
+ Conductor                | Nocturno Mixto B           |         1 |        12405.06
+ Custodio                 | Vespertino L-S             |         6 |        14161.22
+ Custodio                 | Vespertino L-V             |         4 |        13505.15
+ Custodio                 | Nocturno Mixto A           |         4 |        14959.21
+ Custodio                 | Matutino Mixto B           |         3 |        13281.54
+ Custodio                 | Nocturno L-V               |         3 |        15252.08
+ Custodio                 | Matutino Fines de semana   |         3 |        13836.66
+ Custodio                 | Nocturno Fines de semana   |         3 |        13490.99
+ Custodio                 | Nocturno Mixto B           |         3 |        15808.43
+ Custodio                 | Vespertino Mixto A         |         2 |        15741.01
+ Custodio                 | Vespertino Fines de semana |         2 |        15556.48
+ Custodio                 | Matutino L-S               |         2 |        17230.21
+ Custodio                 | Matutino L-V               |         1 |        16186.10
+ Custodio                 | Nocturno L-S               |         1 |        13236.09
+ Director                 | Matutino L-V               |         1 |        72239.24
+ Enfermero                | Vespertino Fines de semana |         4 |        18626.26
+ Enfermero                | Vespertino Mixto B         |         2 |        19874.18
+ Enfermero                | Matutino L-V               |         2 |        20279.52
+ Enfermero                | Matutino Fines de semana   |         1 |        17318.33
+ Enfermero                | Matutino Mixto A           |         1 |        19425.19
+ Enfermero                | Vespertino L-S             |         1 |        20815.12
+ Enfermero                | Vespertino Mixto A         |         1 |        21951.40
+ Instructor de taller     | Vespertino Mixto B         |         1 |        12596.71
+ Instructor de taller     | Nocturno Mixto B           |         1 |        11332.66
+ Jefe de custodios        | Vespertino Mixto B         |         2 |        28256.72
+ Jefe de custodios        | Vespertino Mixto A         |         1 |        24060.43
+ Jefe de custodios        | Nocturno L-S               |         1 |        30500.27
+ Jefe de custodios        | Nocturno Fines de semana   |         1 |        23811.80
+ Jefe de custodios        | Vespertino L-V             |         1 |        31697.83
+ Mantenimiento            | Nocturno Mixto B           |         1 |        13091.56
+ Mantenimiento            | Matutino L-S               |         1 |        10021.30
+ Mantenimiento            | Matutino Mixto B           |         1 |        10121.35
+ Médico general           | Vespertino L-S             |         2 |        43077.89
+ Médico general           | Matutino Mixto A           |         2 |        32319.04
+ Médico general           | Matutino Mixto B           |         1 |        37594.17
+ Médico general           | Vespertino Mixto A         |         1 |        38139.39
+ Médico general           | Matutino Fines de semana   |         1 |        44584.79
+ Médico general           | Matutino L-V               |         1 |        35562.53
+ Operador de cámaras      | Matutino L-S               |         1 |        10993.87
+ Operador de cámaras      | Nocturno Fines de semana   |         1 |        10912.96
+ Operador de cámaras      | Vespertino Mixto A         |         1 |        14603.23
+ Personal de limpieza     | Nocturno L-V               |         2 |         9570.60
+ Personal de limpieza     | Matutino Mixto B           |         1 |         8223.13
+ Personal de limpieza     | Matutino L-S               |         1 |         9721.96
+ Personal de limpieza     | Matutino L-V               |         1 |        10847.09
+ Personal de limpieza     | Nocturno Mixto A           |         1 |         9754.04
+ Psicólogo                | Vespertino Mixto A         |         2 |        23334.68
+ Psicólogo                | Matutino Mixto A           |         1 |        18997.99
+ Psicólogo                | Matutino Mixto B           |         1 |        19506.72
+ Psicólogo                | Vespertino Fines de semana |         1 |        22463.09
+ Psicólogo                | Vespertino Mixto B         |         1 |        20045.81
+ Psicólogo                | Matutino L-V               |         1 |        25053.61
+ Recepcionista de visitas | Matutino L-S               |         4 |        10333.52
+ Recepcionista de visitas | Matutino L-V               |         3 |        12630.80
+ Subdirector              | Matutino L-V               |         2 |        60439.32
+ Subdirector              | Matutino L-S               |         1 |        46221.14
+ Trabajador social        | Matutino L-S               |         3 |        15076.38
+(63 filas)
+
+ id_recluso |             recluso              |    estatus    
+------------+----------------------------------+---------------
+         10 | José Eduardo Gonzales Valenzuela | activo
+         13 | Uriel Tórrez Zambrano            | activo
+         14 | Martín Villagómez Casas          | activo
+         16 | María José Villanueva Olivárez   | activo
+         18 | Carlos Partida Barragán          | activo
+         22 | Ricardo de la Fuente Trujillo    | activo
+         23 | Fidel Tórrez Palacios            | activo
+         26 | Óscar Matías Mojica              | activo
+         29 | Aldo Mascareñas Ferrer           | activo
+         30 | Germán Rodríguez Covarrubias     | activo
+         33 | Rufino Cavazos Prado             | activo
+         37 | Bernardo Saldaña Treviño         | activo
+         40 | Eric Cabrera Espinal             | activo
+         42 | Elias Mendoza Gaona              | activo
+         46 | Rolando Viera Ocasio             | activo
+         52 | Alvaro Barreto Lovato            | activo
+         54 | Francisco Montero Montez         | activo
+         58 | Bruno Sepúlveda Perea            | activo
+         60 | Silvano Alonso Hernádez          | activo
+         61 | Jorge Hidalgo Cabán              | hospitalizado
+         62 | Alonso Bonilla Chavarría         | activo
+         63 | Graciela Hurtado Tovar           | activo
+         68 | Manuel Barajas Quintanilla       | activo
+         69 | Vicente Maldonado Arce           | activo
+         71 | Ricardo Soria Guzmán             | activo
+         72 | Miguel Ángel Ortiz Apodaca       | activo
+         76 | Abraham Vásquez Paz              | activo
+         77 | Horacio Lugo Ceja                | activo
+         82 | Antonio Tapia Villareal          | activo
+         84 | Alonso Leal Rivera               | activo
+         85 | Zacarías Llamas Téllez           | activo
+         88 | Antonio Mondragón Corona         | activo
+         89 | Jorge Luis Benavídez Cedillo     | activo
+         93 | Hernán Quiñones Quiroz           | activo
+         96 | Gerónimo Melgar Velázquez        | activo
+        103 | Miriam Martínez Jaramillo        | hospitalizado
+        106 | Horacio de la Rosa Valles        | activo
+        107 | Manuel Olmos Juárez              | activo
+        109 | José Manuél Barela Nazario       | activo
+        110 | Hugo Cabrera Cazares             | activo
+        113 | Cynthia Carrera Villalobos       | activo
+        116 | María Elena Farías Nazario       | activo
+        122 | Beatriz Tórrez Beltrán           | hospitalizado
+        123 | Leonel Leiva de la Garza         | activo
+        124 | Reynaldo Munguía Cazares         | activo
+        125 | Omar Carbajal Beltrán            | activo
+        129 | Adalberto Murillo Magaña         | activo
+        130 | Gabriela Gálvez Tapia            | activo
+        132 | César Caraballo Pelayo           | activo
+        135 | Augusto Alarcón Navarro          | activo
+        137 | Karina Caballero de la Garza     | activo
+        138 | Andrés Solorio Ceballos          | activo
+        141 | Cornelio Jaime Carvajal          | activo
+        143 | Cristian Cardenas Peralta        | activo
+        146 | Ernesto Estrada Rivas            | activo
+        147 | Genaro Galván del Río            | activo
+        149 | José Carlos Anaya Carbajal       | activo
+        152 | Enrique Reyna Palomino           | activo
+        155 | Reynaldo Tijerina Ochoa          | activo
+        158 | Maximiliano Villanueva Calderón  | activo
+        159 | Camilo Becerra Villalpando       | activo
+        162 | Alfonso Garay Casárez            | activo
+        164 | Rafaél Collazo Ávalos            | activo
+        166 | Eduardo Hidalgo Cintrón          | activo
+        171 | Juan Burgos Salinas              | activo
+        172 | Lorenzo Garza Melgar             | activo
+        175 | Salma Solís Matías               | activo
+        179 | Jorge Luis Matías Zepeda         | activo
+        186 | Dulce Moya Terrazas              | activo
+        187 | Carlos Alarcón Zapata            | activo
+        189 | Martín Robledo Camacho           | activo
+        190 | Rosalia Partida Rodarte          | activo
+        194 | Rufino Sierra Guerrero           | activo
+        196 | Aurelio Paredes Madrid           | activo
+        198 | Evelio Robledo Olvera            | activo
+        201 | René Alba Cadena                 | activo
+        202 | Juan Carlos Cazares Zaragoza     | activo
+        203 | Linda Segura Prado               | activo
+        205 | Oswaldo Padrón Martínez          | activo
+        212 | Miriam Meléndez Llamas           | activo
+        213 | Juan Iglesias Madera             | activo
+        215 | Jorge Luis Sevilla Calvillo      | activo
+        221 | Francisco Castro Salas           | activo
+        222 | Enrique Llamas Ontiveros         | hospitalizado
+        223 | José Carlos Botello Blanco       | activo
+        225 | Rosalia Collazo Montalvo         | activo
+        227 | Amador Nájera Molina             | activo
+        228 | Nicolás Córdova Medrano          | activo
+        230 | Humberto Sáenz Altamirano        | activo
+        233 | Bernardo Ortega Samaniego        | activo
+        240 | Eduardo Olivárez Adame           | activo
+        242 | José Eduardo Durán Bernal        | activo
+        245 | Iván Pacheco Griego              | activo
+        255 | Bernabé Nieves Gálvez            | activo
+        259 | Irma Villa Hinojosa              | hospitalizado
+        264 | Wilfrido Jaime Matos             | activo
+        267 | Amador Carrillo Menéndez         | activo
+        268 | Gustavo Otero Aguilera           | activo
+        271 | Enrique Mares Bravo              | activo
+        277 | Óscar Cepeda Alonzo              | activo
+        280 | Wilfrido Nevárez Páez            | activo
+        285 | Nicolás Samaniego Casárez        | activo
+        286 | Emilio Arce Gamez                | activo
+        289 | Nayeli Serna Godoy               | activo
+        295 | Abelardo Fonseca Acosta          | activo
+        299 | Wilfrido de la O Figueroa        | activo
+        304 | Benjamín Guerra Aparicio         | activo
+        308 | Hugo Nava Otero                  | activo
+        309 | Alfonso Arroyo Magaña            | activo
+        310 | Ernesto Chávez Jaramillo         | activo
+        312 | Felipe Santana Miranda           | activo
+        315 | Lorenzo Barraza Gaytán           | activo
+        317 | Fernando Ledesma Gallardo        | hospitalizado
+        320 | Rodrigo Quintana Espinal         | activo
+        322 | Serafín Maldonado Vega           | activo
+        324 | Abelardo Baeza Cabrera           | activo
+        333 | Espartaco Suárez Perea           | activo
+        339 | Eric Figueroa Prieto             | activo
+        340 | Alfredo Sáenz Haro               | activo
+        344 | Guadalupe Griego Menéndez        | activo
+        348 | Marcos Llamas Pichardo           | activo
+        358 | Porfirio Narváez Torres          | activo
+        360 | Rolando Carrillo Ramos           | activo
+        365 | Raúl Montaño Padilla             | activo
+        366 | Tomás de la Crúz Ordóñez         | activo
+        367 | Hernán Robles Bueno              | activo
+        371 | Bernabé Chavarría Jáquez         | activo
+        372 | Benjamín Prado Salcedo           | activo
+        374 | Andrés Macías García             | activo
+        377 | Soledad Jiménez Mena             | activo
+        381 | Eloy Bravo Llamas                | activo
+        382 | Timoteo Yáñez Miranda            | activo
+        384 | Gustavo Escobar Bétancourt       | activo
+        385 | Federico Ávalos Iglesias         | activo
+        388 | José Menéndez Balderas           | activo
+        390 | David Valencia Garibay           | activo
+        391 | Eloy Tello Pichardo              | activo
+        392 | Cornelio Reyna Zaragoza          | activo
+        393 | Raúl Calvillo Leal               | activo
+        394 | Cristobal Almaraz Alonso         | activo
+        396 | Miguel Ángel Serrato Aragón      | activo
+        399 | Noemí Meraz Medrano              | activo
+        401 | Marisela Aguilar Valdivia        | activo
+        403 | Jorge Luis Treviño Sotelo        | hospitalizado
+        406 | Felix Medina Crespo              | activo
+        408 | Ricardo Roybal Rivera            | activo
+        410 | Hugo Pabón Zamora                | activo
+        411 | Alvaro Miranda Ponce             | activo
+        414 | Sergio Padrón Cardona            | activo
+        415 | Fernando de Jesús Franco         | activo
+        419 | Amador Avilés Pulido             | activo
+        428 | Jesús Amaya Dávila               | activo
+        429 | Agustín de la Crúz Cazares       | activo
+        431 | Agustín Quiroz Lucero            | activo
+        435 | José Manuél Bravo Herrera        | activo
+        440 | Mario Valenzuela Alva            | activo
+        443 | Sergio Valdivia Cepeda           | hospitalizado
+        444 | Rocío Narváez Guerrero           | activo
+        445 | Alfonso de León Bravo            | activo
+        449 | José Eduardo Espino Escobedo     | activo
+        453 | David Ordóñez Merino             | activo
+        454 | Roberto Ibarra Marín             | activo
+        459 | Germán del Río Sauceda           | hospitalizado
+        460 | Amador Pedroza Marrero           | activo
+        462 | Daniel Gallegos Saucedo          | activo
+        463 | Roberto Colunga Jiménez          | activo
+        469 | Felipe Toro Hernández            | activo
+        470 | Clemente Reséndez Cruz           | activo
+        471 | Abelardo Suárez Márquez          | activo
+        476 | Leonel Lerma Hernández           | activo
+        478 | Joaquín Terán Ortega             | activo
+        481 | Abelardo Escamilla Anaya         | activo
+        484 | Víctor Jimínez Alcántar          | activo
+        486 | Cristobal Farías Zarate          | activo
+        487 | Hernán Toro Roque                | activo
+        489 | Miguel Ángel Caballero Almaraz   | activo
+        492 | Porfirio Jaimes Molina           | activo
+        493 | Gilberto Rosado Alarcón          | activo
+        494 | Daniel Oquendo Esparza           | activo
+        497 | Jos de León Orta                 | activo
+        502 | Teodoro Sauceda Barreto          | activo
+        504 | Pedro Tejada Lugo                | activo
+        505 | Genaro Navarrete Beltrán         | activo
+        509 | Mariano Valadez Preciado         | activo
+        510 | Cornelio Nazario Valdez          | activo
+        511 | Felix Saucedo Rivero             | activo
+        512 | Enrique Sevilla Anguiano         | activo
+        514 | Marcos Ibarra Olivo              | hospitalizado
+        515 | Aldo Matos Cabrera               | activo
+        520 | José Solorzano Paredes           | activo
+        523 | Pablo Gamez Olivo                | activo
+        524 | Benjamín Pineda Colunga          | activo
+        525 | Gustavo Méndez Carvajal          | activo
+        526 | Modesto Concepción Rojas         | activo
+        528 | Eloisa Espinosa Jimínez          | hospitalizado
+        533 | Jacinto Herrera Rael             | activo
+        534 | Reynaldo Lira Munguía            | hospitalizado
+        539 | Nicolás Vera Marrero             | activo
+        540 | Maximiliano López Pedraza        | activo
+        541 | Maximiliano del Valle Garay      | activo
+        544 | Rafaél Fuentes Pineda            | activo
+        545 | Ernesto Uribe Archuleta          | activo
+        548 | Francisco Javier Leal Rojo       | activo
+        553 | Espartaco Castellanos Briseño    | hospitalizado
+        555 | Maximiliano Aguirre Casas        | activo
+        556 | Abraham Zelaya Rosado            | activo
+        557 | Evelio Alvarado Colunga          | activo
+        560 | Cornelio Jasso Lozada            | activo
+        564 | Miguel Tello Ayala               | activo
+        565 | Guillermo Chavarría Campos       | activo
+        569 | Ernesto Olivo Villareal          | activo
+        570 | Rodrigo Palomo Trejo             | activo
+        572 | Serafín Meléndez Vargas          | activo
+        578 | Amador Zamora Arenas             | activo
+        579 | Elsa Carrillo Ocasio             | activo
+        580 | José Manuél Posada Regalado      | activo
+        582 | Jacinto Carmona Zelaya           | activo
+        586 | Cristobal Mesa Véliz             | activo
+        587 | Rafaél Vergara Toledo            | activo
+        588 | Frida Nieves Treviño             | activo
+        589 | Óliver Tamayo Alemán             | activo
+        590 | Renato Herrera Almanza           | activo
+        591 | Gilberto Samaniego Soliz         | activo
+        592 | Hernán Rosales Leiva             | activo
+        593 | José María Jaimes Garrido        | activo
+        594 | Mateo Posada Jiménez             | activo
+        595 | Israel Gamez Verdugo             | activo
+        596 | Hugo Paredes Nevárez             | activo
+        597 | José Emilio Armendáriz Olivas    | activo
+        598 | Karla Arredondo Longoria         | activo
+        599 | Enrique Guajardo Garza           | activo
+        600 | Samuel Reynoso Pacheco           | activo
+(232 filas)
+
+           recluso           | total_visitas | visitantes_distintos | ultima_visita |                  parentescos                  
+-----------------------------+---------------+----------------------+---------------+-----------------------------------------------
+ Pedro Cepeda Cadena         |            21 |                    6 | 2026-10-31    | Amigo, Esposo, Hermana, Hermano, Madre, Primo
+ Rolando Soria del Río       |            21 |                    5 | 2026-05-17    | Compañero de trabajo, Hermano, Hija, Vecino
+ Ernesto Villareal Guevara   |            18 |                    5 | 2026-10-25    | Esposa, Hermano, Hijo, Primo
+ Óscar Ávalos Almanza        |            17 |                    6 | 2026-10-21    | Abogado, Amigo, Hermana, Hermano, Padre
+ Camilo Ulibarri Angulo      |            15 |                    4 | 2026-10-04    | Compañero de trabajo, Madre, Primo, Tío
+ Angélica Valadez Escobedo   |            15 |                    3 | 2026-07-04    | Abuelo, Esposo, Hermana
+ Bernabé Galarza Estévez     |            14 |                    4 | 2026-11-01    | Amigo, Compañero de trabajo, Primo, Vecino
+ Elias Maldonado Rodríguez   |            14 |                    3 | 2026-11-01    | Abogado, Abuelo, Amigo
+ Jacinto Escamilla Samaniego |            14 |                    3 | 2026-10-11    | Esposo, Hija, Pareja
+ Andrés Alba Guerra          |            13 |                    4 | 2026-10-31    | Esposa, Madre, Pareja, Tío
+(10 filas)
+
