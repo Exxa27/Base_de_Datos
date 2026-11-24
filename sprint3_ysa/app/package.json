@@ -1,0 +1,8 @@
+{
+  "name": "la-penal-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API de solo lectura + frontend para consultar La Penal (PostgreSQL + MongoDB)",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.19.2", "mongodb": "^6.8.0", "pg": "^8.12.0" }
+}

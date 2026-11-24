@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Penal · Consultas</title>
+<style>
+:root{--bg:#111;--panel:#1b1b1b;--line:#333;--tx:#eee;--mut:#999;--y:#f7c948}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,sans-serif}
+header{padding:14px 20px;border-bottom:4px solid var(--y);background:repeating-linear-gradient(135deg,#111 0 14px,#1a1a1a 14px 28px)}
+h1{margin:0;font-size:22px;letter-spacing:2px;text-transform:uppercase}h1 span{color:var(--y)}
+nav{display:flex;gap:6px;padding:10px 20px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+button,select,input{font:inherit;background:var(--panel);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:7px 12px}
+button{cursor:pointer}button:hover,button.on{border-color:var(--y);color:var(--y)}
+main{padding:16px 20px}section{display:none}section.on{display:block}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.f{width:100%;max-width:340px;margin-bottom:8px}.m{color:var(--mut);margin:4px 0}
+.w{overflow-x:auto;border:1px solid var(--line);border-radius:6px;max-height:60vh}
+table{border-collapse:collapse;width:100%}th,td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;max-width:320px;overflow-wrap:anywhere}
+th{position:sticky;top:0;background:#222;color:var(--y);white-space:nowrap}
+h3{color:var(--y);margin:18px 0 6px}.err{color:#ff6b6b}
+.ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;background:var(--panel);padding:12px;border-radius:6px;border:1px solid var(--line)}
+.ficha b{display:block;color:var(--mut);font-weight:400;font-size:12px}
+</style>
+</head>
+<body>
+<header><h1>La <span>Penal</span> · Consultas</h1></header>
+<nav>
+  <button data-t="rep" class="on">Reportes</button>
+  <button data-t="pg">Tablas y vistas (PostgreSQL)</button>
+  <button data-t="mg">Colecciones (MongoDB)</button>
+  <button data-t="fic">Ficha de recluso</button>
+</nav>
+<main>
+  <section id="rep" class="on"><div class="row" id="repBtns"></div><div id="repOut"></div></section>
+  <section id="pg"><div class="row"><select id="pgSel"></select></div><div id="pgOut"></div></section>
+  <section id="mg"><div class="row"><select id="mgSel"></select></div><div id="mgOut"></div></section>
+  <section id="fic">
+    <div class="row"><input id="q" placeholder="Nombre o ID del recluso"><button id="buscar">Buscar</button></div>
+    <div class="row" id="resultados"></div><div id="fichaOut"></div>
+  </section>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (v) => String(v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmt = (v) => v == null ? '—' : typeof v === 'object' ? JSON.stringify(v)
+  : /^\d{4}-\d\d-\d\dT/.test(v) ? v.slice(0, 16).replace('T', ' ').replace(' 00:00', '') : v;
+const api = async (u) => { const r = await fetch(u); const d = await r.json(); if (!r.ok) throw new Error(d.error); return d; };
+const error = (el, e) => { el.innerHTML = `<p class="err">${esc(e.message)}</p>`; };
+
+function mostrar(rows, el) {
+  if (!rows.length) { el.innerHTML = '<p class="m">Sin resultados</p>'; return; }
+  const cols = Object.keys(rows[0]);
+  el.innerHTML = `<input class="f" placeholder="Filtrar…"><p class="m"></p><div class="w"><table><thead><tr>${cols.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody></tbody></table></div>`;
+  const tb = el.querySelector('tbody'), cnt = el.querySelector('.m');
+  const pintar = (q) => {
+    const f = rows.filter((r) => !q || JSON.stringify(r).toLowerCase().includes(q));
+    tb.innerHTML = f.map((r) => `<tr>${cols.map((c) => `<td>${esc(fmt(r[c]))}</td>`).join('')}</tr>`).join('');
+    cnt.textContent = `${f.length} de ${rows.length} filas`;
+  };
+  el.querySelector('.f').oninput = (e) => pintar(e.target.value.toLowerCase());
+  pintar('');
+}
+
+document.querySelectorAll('nav button').forEach((b) => b.onclick = () => {
+  document.querySelectorAll('nav button,section').forEach((x) => x.classList.remove('on'));
+  b.classList.add('on'); $('#' + b.dataset.t).classList.add('on');
+});
+
+async function init() {
+  try {
+    const reps = await api('/api/reportes');
+    $('#repBtns').innerHTML = reps.map((r) => `<button data-id="${r.id}">${esc(r.titulo)}</button>`).join('');
+    $('#repBtns').onclick = async (e) => {
+      const id = e.target.dataset.id; if (!id) return;
+      try { mostrar(await api('/api/reportes/' + id), $('#repOut')); } catch (x) { error($('#repOut'), x); }
+    };
+  } catch (x) { error($('#repOut'), x); }
+  try {
+    const t = await api('/api/tablas');
+    $('#pgSel').innerHTML = '<option value="">Elige una tabla o vista…</option>' + t.map((n) => `<option>${esc(n)}</option>`).join('');
+  } catch (x) { error($('#pgOut'), x); }
+  try {
+    const c = await api('/api/mongo');
+    $('#mgSel').innerHTML = '<option value="">Elige una colección…</option>' + c.map((n) => `<option>${esc(n)}</option>`).join('');
+  } catch (x) { error($('#mgOut'), x); }
+}
+$('#pgSel').onchange = async (e) => { if (e.target.value) try { mostrar(await api('/api/tablas/' + e.target.value), $('#pgOut')); } catch (x) { error($('#pgOut'), x); } };
+$('#mgSel').onchange = async (e) => { if (e.target.value) try { mostrar(await api('/api/mongo/' + e.target.value), $('#mgOut')); } catch (x) { error($('#mgOut'), x); } };
+
+async function buscar() {
+  try {
+    const r = await api('/api/reclusos?q=' + encodeURIComponent($('#q').value));
+    $('#resultados').innerHTML = r.length ? r.map((x) => `<button data-id="${x.id_recluso}">#${x.id_recluso} ${esc(x.nombre)} (${esc(x.estatus)})</button>`).join('') : '<p class="m">Sin coincidencias</p>';
+  } catch (x) { error($('#resultados'), x); }
+}
+$('#buscar').onclick = buscar;
+$('#q').onkeydown = (e) => { if (e.key === 'Enter') buscar(); };
+$('#resultados').onclick = async (e) => {
+  const id = e.target.dataset.id; if (!id) return;
+  const out = $('#fichaOut');
+  try {
+    const d = await api('/api/recluso/' + id), r = d.recluso;
+    const campos = { Nombre: r.nombre, Estatus: r.estatus, Sexo: r.sexo, Nacimiento: r.fecha_nacimiento, Ingreso: r.fecha_ingreso, Sección: r.seccion, Pabellón: r.pabellon, Celda: `${r.numero_celda} (${r.tipo_celda})` };
+    const secciones = [
+      ['Sentencias (MongoDB)', d.sentencias], ['Cargos previos (MongoDB)', d.antecedentes ? d.antecedentes.cargos_previos : []],
+      ['Bitácora de conducta (MongoDB)', d.bitacora ? d.bitacora.registros : []], ['Castigos (MongoDB)', d.castigos],
+      ['Traslados (MongoDB)', d.traslados], ['Contactos de emergencia (MongoDB)', d.contactos],
+      ['Visitas recientes (PostgreSQL)', d.visitas], ['Consultas médicas (PostgreSQL)', d.consultas],
+    ];
+    out.innerHTML = `<div class="ficha">${Object.entries(campos).map(([k, v]) => `<div><b>${k}</b>${esc(fmt(v))}</div>`).join('')}
+      ${d.antecedentes ? `<div><b>Reincidente</b>${d.antecedentes.reincidente ? 'Sí' : 'No'}</div>` : ''}
+      ${d.bitacora ? `<div><b>Conducta actual</b>${esc(d.bitacora.estado_actual)}</div><div><b>Horas reducidas</b>${d.bitacora.total_horas_reducidas}</div>` : ''}</div>`
+      + secciones.map(([t], i) => `<h3>${t}</h3><div id="sec${i}"></div>`).join('');
+    secciones.forEach(([, rows], i) => mostrar(rows, $('#sec' + i)));
+  } catch (x) { error(out, x); }
+};
+init();
+</script>
+</body>
+</html>
